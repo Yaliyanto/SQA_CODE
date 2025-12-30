@@ -17,7 +17,7 @@ pipeline {
                     docker.image('python:3.13.9-slim').inside("--network yali_network") {
                         stage('Install Dependencies') {
                             sh '''
-                                cd /var/jenkins_home_yal/workspace/SQA_Code_Along
+                                cd /var/jenkins_yali_jenkins_home_yal/workspace/SQA_CODE
                                 ls -la
                                 pip install -r requirements.txt
                             '''
@@ -25,7 +25,7 @@ pipeline {
                         
                         stage('Run Tests') {
                             sh '''
-                                cd /var/jenkins_home_yal/workspace/SQA_Code_Along
+                                cd /var/jenkins_yali_jenkins_home_yal/workspace/SQA_CODE
                                 pytest test_api.py -v --alluredir=allure-results
                             '''
                         }
