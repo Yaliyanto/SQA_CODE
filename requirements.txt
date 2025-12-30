@@ -1,0 +1,6 @@
+requests
+pytest
+allure-pytest
+python-dotenv
+jsonschema
+faker
